@@ -173,7 +173,7 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          {/* <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
           >
@@ -182,7 +182,7 @@ const Home: React.FC = () => {
                 <OpportunityCard opportunity={opportunity} />
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           <motion.div className="text-center mt-12" variants={fadeInUp}>
             <Link
