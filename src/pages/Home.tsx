@@ -5,6 +5,7 @@ import { Search, Users, MapPin, Heart, Star, ArrowRight } from 'lucide-react';
 import SearchBar from '../components/SearchBar';
 import OpportunityCard from '../components/OpportunityCard';
 import TestimonialCard from '../components/TestimonialCard';
+import  HowItWorksSection from '../components/HowItWorks'
 
 const Home: React.FC = () => {
   const fadeInUp = {
@@ -204,7 +205,7 @@ const Home: React.FC = () => {
         viewport={{ once: true }}
         variants={staggerContainer}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={fadeInUp}>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-4">
               How It Works
@@ -262,11 +263,12 @@ const Home: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
+        <HowItWorksSection />
       </motion.section>
 
       {/* Testimonials */}
-      <motion.section 
+      {/* <motion.section 
         className="py-20 bg-gradient-to-r from-honey/10 to-teal/10 dark:from-honey/5 dark:to-teal/5"
         initial="initial"
         whileInView="animate"
@@ -294,7 +296,7 @@ const Home: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* CTA Section */}
       <motion.section 

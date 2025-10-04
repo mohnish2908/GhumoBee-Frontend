@@ -22,23 +22,23 @@ const About: React.FC = () => {
   const values = [
     {
       icon: Heart,
-      title: "Cultural Exchange",
-      description: "We believe in the power of cultural exchange to build bridges, break down barriers, and create lasting friendships across the globe."
+      title: "Meaningful Exchange",
+      description: "For us, travel is more than money changing hands. It’s about sharing skills, stories, and experiences that add value to both sides. When hosts and travelers come together, everyone should walk away with something real and memorable."
     },
     {
       icon: Shield,
-      title: "Trust & Safety",
-      description: "Every host and volunteer is verified through our comprehensive screening process to ensure safe and authentic experiences."
+      title: "Authenticity and Trust",
+      description: "We believe honest connections last the longest. By being transparent and respectful, we’re creating a space where both hosts and travelers feel safe, comfortable, and valued."
     },
     {
       icon: Globe,
-      title: "Sustainability",
-      description: "We promote sustainable travel practices and encourage volunteers to make positive environmental and social impacts."
+      title: "Empowering Hosts and Travelers",
+      description: "An empty room can be more than just a room, and a simple skill can open unexpected doors. We want to give hosts the support they need, while giving travelers a chance to create purposeful journeys."
     },
     {
       icon: Users,
-      title: "Community First",
-      description: "Our platform prioritizes meaningful connections and community building over commercial transactions."
+      title: "Community Over Competition",
+      description: "GhumoBee is not just a platform, it’s a hive. A place where people work together, learn from each other, and build friendships that go far beyond a trip."
     }
   ];
 
@@ -75,7 +75,7 @@ const About: React.FC = () => {
                 <div>
                   <p className="font-semibold text-charcoal dark:text-white">Our Mission</p>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Connecting hearts and cultures worldwide
+                    Connecting hearts and cultures all over India.
                   </p>
                 </div>
               </div>
@@ -90,7 +90,7 @@ const About: React.FC = () => {
                 alt="Volunteers working together"
                 className="rounded-2xl shadow-2xl"
               />
-              <motion.div 
+              {/* <motion.div 
                 className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg"
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 3, repeat: Infinity }}
@@ -102,14 +102,14 @@ const About: React.FC = () => {
                     <p className="text-xs text-gray-500">Since 2020</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
         </div>
       </motion.section>
 
       {/* Stats Section */}
-      <motion.section 
+      {/* <motion.section 
         className="py-16 bg-white dark:bg-gray-900"
         initial="initial"
         whileInView="animate"
@@ -138,7 +138,7 @@ const About: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Values Section */}
       <motion.section 
@@ -206,22 +206,26 @@ const About: React.FC = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300">
               <motion.p className="mb-6" variants={fadeInUp}>
-                GhumoBee started in 2020 when our founder, backpacking through Southeast Asia, 
-                experienced the transformative power of staying with local families and 
-                contributing to their communities. Unlike traditional tourism, these experiences 
-                created genuine connections and mutual learning.
+                During a trip to Manali with a few friends changed everything. Unlike a typical stay, we discovered something surprising,
+                 the receptionist at our property wasn’t a regular employee. She was also a traveler. 
+                 She had been living there for a month, completely free, while helping the host manage the place.
+
               </motion.p>
               
               <motion.p className="mb-6" variants={fadeInUp}>
-                We realized there was a gap in the travel industry - a platform that could 
-                connect conscious travelers with meaningful volunteer opportunities while 
-                ensuring fair compensation and authentic cultural exchange for host communities.
-              </motion.p>
+                That conversation stayed with us. On one hand, hosts often struggle with finding reliable, affordable 
+                help. On the other, travelers are looking for meaningful experiences but can’t always afford long stays.
+               </motion.p>
+
+               <motion.p className="mb-6" variants={fadeInUp}>  
+                And that’s when the idea for GhumoBee 🐝 was born.
+                What if we created a platform that connects property owners with travelers willing to exchange their skills photography, 
+                gardening, cooking, digital marketing, and more for accommodation and meals? A fair, simple exchange where everyone benefits.
+               </motion.p>
               
               <motion.p variants={fadeInUp}>
-                Today, GhumoBee is more than just a platform - we're a global community of 
-                change-makers, cultural ambassadors, and lifelong learners who believe that 
-                travel can be a force for good in the world.
+                Today, GhumoBee is growing into a community where empty rooms turn into opportunities,
+                 travelers find purpose in their journeys, and hosts get the support they need all while creating genuine human connections.
               </motion.p>
             </div>
           </motion.div>

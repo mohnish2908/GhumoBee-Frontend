@@ -206,10 +206,10 @@ const Contact: React.FC = () => {
                   <Mail className="h-5 w-5 text-honey mt-1" />
                   <div>
                     <p className="font-medium text-charcoal dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-300">support@ghumobee.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">collab@ghumobee.com</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                {/* <div className="flex items-start space-x-3">
                   <Phone className="h-5 w-5 text-honey mt-1" />
                   <div>
                     <p className="font-medium text-charcoal dark:text-white">24/7 Support</p>
@@ -225,12 +225,12 @@ const Contact: React.FC = () => {
                       San Francisco, CA 94102
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
 
             {/* Quick Support Links */}
-            <motion.div 
+            {/* <motion.div 
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg"
               variants={fadeInUp}
             >
@@ -256,12 +256,12 @@ const Contact: React.FC = () => {
                   </button>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
 
         {/* FAQ Section */}
-        <motion.section 
+        {/* <motion.section 
           className="mt-16"
           initial="initial"
           whileInView="animate"
@@ -297,7 +297,7 @@ const Contact: React.FC = () => {
               </motion.details>
             ))}
           </motion.div>
-        </motion.section>
+        </motion.section> */}
       </div>
     </div>
   );
