@@ -29,6 +29,7 @@ const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity, showScor
   const displaySkills = opportunity.skills.slice(0, 3);
   const hasMoreSkills = opportunity.skills.length > 3;
   const remainingSkillsCount = opportunity.skills.length - 3;
+  // console.log("a",opportunity)
   
   const formatDuration = () => {
     if (opportunity.maximumDuration) {
@@ -77,7 +78,7 @@ const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity, showScor
         {/* Content */}
         <div className="p-6">
           <h3 className="text-xl font-semibold text-charcoal dark:text-white mb-2">
-            {opportunity.title}
+            Ghumo {opportunity.district}
           </h3>
         
           {/* Location */}

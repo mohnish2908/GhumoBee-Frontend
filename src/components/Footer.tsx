@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
                <img
-              src={isDark ? b : a}
+              src={b }
               alt="Site Logo"
               className="h-6 sm:h-8 w-auto object-contain transition-transform duration-300 hover:scale-105"
             />
