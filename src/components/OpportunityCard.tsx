@@ -88,9 +88,9 @@ const OpportunityCard: React.FC<OpportunityCardProps> = ({ opportunity, showScor
           </div>
 
           {/* District + "Ghumo" */}
-          <p className="text-sm text-teal font-medium mb-3">
+          {/* <p className="text-sm text-teal font-medium mb-3">
             {opportunity.district}Ghumo
-          </p>
+          </p> */}
 
           {/* Skills Tags */}
           <div className="flex flex-wrap gap-2 mb-4">

@@ -619,7 +619,7 @@ const ViewOpportunity: React.FC = () => {
               </div>
 
               {/* Transport */}
-              {opportunity.transport && opportunity.transport.length > 0 && (
+              {/* {opportunity.transport && opportunity.transport.length > 0 && (
                 <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                   <h4 className="font-medium text-charcoal dark:text-white mb-3 flex items-center">
                     <MapPin className="h-5 w-5 mr-2 text-teal" />
@@ -636,7 +636,7 @@ const ViewOpportunity: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
             </motion.div>
 
             {/* Location & Expectations */}
