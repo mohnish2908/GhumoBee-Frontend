@@ -929,7 +929,7 @@ const CreateOpportunity: React.FC = () => {
               />
             </div>
 
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
                 What will volunteers be doing?
               </label>
@@ -941,9 +941,9 @@ const CreateOpportunity: React.FC = () => {
                 className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-honey focus:border-transparent bg-white dark:bg-gray-700 dark:text-white"
                 placeholder="Volunteers will assist in planting seasonal crops, watering plants, preparing compost, cooking local meals, helping children with English, and supporting eco-friendly building projects."
               />
-            </div>
+            </div> */}
 
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
                 Expectations from Volunteers
               </label>
@@ -955,7 +955,7 @@ const CreateOpportunity: React.FC = () => {
                 className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-honey focus:border-transparent bg-white dark:bg-gray-700 dark:text-white"
                 placeholder="We expect volunteers to work 5–6 hours a day, 5 days a week, with a minimum stay of 2 weeks. You should be open-minded, respectful of local traditions, and willing to help with both physical and light household tasks."
               />
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
