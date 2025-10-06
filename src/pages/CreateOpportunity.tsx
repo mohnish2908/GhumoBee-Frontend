@@ -951,10 +951,10 @@ const CreateOpportunity: React.FC = () => {
                 name="expectations"
                 value={formData.expectations}
                 onChange={handleChange}
-                rows={4}
+                rows={5}
                 className="w-full px-4 py-3 border border-gray-200 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-honey focus:border-transparent bg-white dark:bg-gray-700 dark:text-white"
                 // placeholder="We expect volunteers to work 5–6 hours a day, 5 days a week, with a minimum stay of 2 weeks. You should be open-minded, respectful of local traditions, and willing to help with both physical and light household tasks."
-                placeholder='We’re looking for volunteers who are friendly, respectful, and open to new cultures. As part of our community, we ask you to respect quiet hours after 10 PM, help keep shared spaces clean, use resources like water responsibly, and bring a positive attitude. Right now, we especially need help with wall art, photography, video editing and social media management, but we’re always open to other creative skills that can add value.'
+                placeholder='We’re looking for volunteers who are friendly, respectful, and open to new cultures. We expect you to respect quiet hours after 10 PM, keep shared spaces clean, use water responsibly. Right now, we especially need help with wall art, photography, video editing and social media management, but we’re always open to other creative skills that can add value.'
               />
             </div>
 
