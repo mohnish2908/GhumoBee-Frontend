@@ -558,7 +558,7 @@ const ViewOpportunity: React.FC = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold text-charcoal dark:text-white mb-6">
-                Accommodation & What's Included
+                What You Will Get
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Accommodation */}
