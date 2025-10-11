@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                   to="/signup"
                   className="px-4 py-2 text-sm font-medium text-charcoal dark:text-white hover:text-honey transition-colors"
                 >
-                  Sign In
+                  Sign Up
                 </Link>
                 <Link
                   to="/login"
@@ -169,7 +169,7 @@ const Header: React.FC = () => {
                           : "text-charcoal dark:text-white hover:text-honey"
                       }`}
                     >
-                      Sign In
+                      Sign Up
                     </Link>
                     <Link
                       to="/login"

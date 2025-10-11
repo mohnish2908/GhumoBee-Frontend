@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/login" className="text-gray-300 hover:text-honey transition-colors">
-                  Sign In
+                  Sign Up
                 </Link>
               </li>
             </ul>

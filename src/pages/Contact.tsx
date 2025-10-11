@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, MessageCircle, Send, HelpCircle, Shield, Globe } from 'lucide-react';
 import {contactUs} from '../services/operations/authApi';
-import { form } from 'framer-motion/client';
+// import { form } from 'framer-motion/client';
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
