@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, MessageCircle, Send, HelpCircle, Shield, Globe } from 'lucide-react';
-
+import {contactUs} from '../services/operations/authApi';
+import { form } from 'framer-motion/client';
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,6 +15,15 @@ const Contact: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
+    const res=contactUs(formData);
+    console.log(res);
+    
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

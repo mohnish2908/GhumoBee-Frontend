@@ -11,6 +11,8 @@ export const endpoints = {
   CHANGE_PASSWORD_API: `${BASE_URL}/auth/change-password`,
   GET_USER_API: `${BASE_URL}/auth/get-user`,
   UPDATE_USER_API: `${BASE_URL}/auth/edit-user`,
+  GET_ALL_USERS_API: `${BASE_URL}/auth/getAllUsers`,
+  CONTACT_US_API: `${BASE_URL}/auth/contactus`,
 };
 
 export const hostEndpoint={

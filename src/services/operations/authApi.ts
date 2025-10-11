@@ -12,6 +12,7 @@ const {
   CHANGE_PASSWORD_API,
   GET_USER_API,
   UPDATE_USER_API,
+  CONTACT_US_API
 } = endpoints;
 
 const token = localStorage.getItem("token") || null;
@@ -281,4 +282,27 @@ export function logout() {
       toast.success("Logged out successfully");
     }
   };
+}
+
+export async function contactUs(data: {name:string,email:string,subject:string,message:string}){
+  const toastId = toast.loading("Sending message...");
+  try{
+    console.log("data",data);
+    const response = await apiConnector("POST", CONTACT_US_API, data);
+    if (response && response.data?.success) {
+      toast.success("Message sent successfully", { id: toastId });
+      return response.data;
+    }
+    toast.error("Failed to send message", { id: toastId });
+    return null;
+  }
+  catch (err) {
+    const axiosError = err as AxiosError;
+    const errorMessage =
+      (axiosError?.response?.data as any)?.message ||
+      axiosError?.message ||
+      "Could not fetch profile data";
+    toast.error(errorMessage, { id: toastId });
+    return null;
+  }
 }
