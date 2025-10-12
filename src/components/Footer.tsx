@@ -27,29 +27,29 @@ const Footer: React.FC = () => {
               Build communities, share cultures, and make a positive impact.
             </p>
             <div className="flex space-x-4">
-              <a
+              {/* <a
                 href="#"
                 className="p-2 bg-gray-700 hover:bg-honey hover:text-charcoal rounded-lg transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="p-2 bg-gray-700 hover:bg-honey hover:text-charcoal rounded-lg transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/ghumobee"
                 className="p-2 bg-gray-700 hover:bg-honey hover:text-charcoal rounded-lg transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/ghumobee/"
                 className="p-2 bg-gray-700 hover:bg-honey hover:text-charcoal rounded-lg transition-colors"
                 aria-label="LinkedIn"
               >

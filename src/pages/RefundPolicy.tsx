@@ -76,7 +76,7 @@ const RefundPolicy: React.FC = () => {
             className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            (Updated) GhumoBee subscriptions and payments provide access to our verified host and traveler network.  
+             GhumoBee subscriptions and payments provide access to our verified host and traveler network.  
             Please read the following policy carefully before subscribing or making payments.
           </motion.p>
         </div>
