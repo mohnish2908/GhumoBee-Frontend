@@ -216,7 +216,7 @@ const Contact: React.FC = () => {
                   <Mail className="h-5 w-5 text-honey mt-1" />
                   <div>
                     <p className="font-medium text-charcoal dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-300">collab@ghumobee.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">info@ghumobee.com</p>
                   </div>
                 </div>
                 {/* <div className="flex items-start space-x-3">

@@ -20,6 +20,10 @@ import ProtectedRoute from './components/ProtectedRoute';
 import AuthRedirect from './components/AuthRedirect';
 import PersonalInfo from './pages/PersonalInfo';
 import RoleProfile from './pages/RoleProfile';
+import TermAndConditions from './pages/TermAndConditions';
+import RefundPolicy from './pages/RefundPolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import SafetyGuideline from './pages/SafetyGuideline';
 
 import { ThemeProvider } from './contexts/ThemeContext';
 import UnauthorizedPage from './pages/UnauthorizedPage';
@@ -40,6 +44,10 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/opportunities" element={<Opportunities />} />
+                <Route path="/terms-and-conditions" element={<TermAndConditions />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/safety-guidelines" element={<SafetyGuideline />} />
                 <Route path="/opportunity/:id" element={<ViewOpportunity />} />
                 
                 {/* <Route path="/plans" element={<PlansPage />} /> */}

@@ -105,28 +105,28 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-honey transition-colors">
-                  Help Center
+                <a href="/refund-policy" className="text-gray-300 hover:text-honey transition-colors">
+                  Refund Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-honey transition-colors">
+                <a href="/safety-guidelines" className="text-gray-300 hover:text-honey transition-colors">
                   Safety Guidelines
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-honey transition-colors">
-                  Terms of Service
+                <a href="/terms-and-conditions" className="text-gray-300 hover:text-honey transition-colors">
+                  Terms And Conditons
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-honey transition-colors">
+                <a href="/privacy-policy" className="text-gray-300 hover:text-honey transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:support@ghumobee.com"
+                  href="mailto:info@ghumobee.com"
                   className="text-gray-300 hover:text-honey transition-colors flex items-center"
                 >
                   <Mail className="h-4 w-4 mr-2" />
