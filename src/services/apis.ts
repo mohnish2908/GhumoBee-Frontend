@@ -43,3 +43,4 @@ export const paymentEndpoint = {
   CAPTURE_PAYMENT_API: `${BASE_URL}/payment/capture-payment`,
   VERIFY_PAYMENT_API: `${BASE_URL}/payment/verify-payment`,
 }
+

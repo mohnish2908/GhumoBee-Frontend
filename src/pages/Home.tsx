@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, Users, MapPin, Heart, Star, ArrowRight } from 'lucide-react';
+import { Search, Users, MapPin, Heart, ArrowRight } from 'lucide-react';
 import SearchBar from '../components/SearchBar';
 import OpportunityCard from '../components/OpportunityCard';
 import TestimonialCard from '../components/TestimonialCard';
-import  HowItWorksSection from '../components/HowItWorks'
+import HowItWorksSection from '../components/HowItWorks';
 
 const Home: React.FC = () => {
   const fadeInUp = {
@@ -87,14 +87,15 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <motion.section 
-        className="relative bg-gradient-to-br from-honey/20 via-teal/10 to-white dark:from-honey/10 dark:via-teal/5 dark:to-gray-900 py-20 overflow-hidden"
+      <motion.section
+        // FIX: Removed `overflow-hidden` from this className to allow the search bar's dropdown to be visible.
+        className="relative bg-gradient-to-br from-honey/20 via-teal/10 to-white dark:from-honey/10 dark:via-teal/5 dark:to-gray-900 py-20"
         initial="initial"
         animate="animate"
         variants={staggerContainer}
       >
         {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden -z-10">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -113,35 +114,35 @@ const Home: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-6xl font-bold text-charcoal dark:text-white mb-6"
               variants={fadeInUp}
             >
               Travel, Volunteer,{' '}
               <span className="text-honey">Connect</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Explore the world with GhumoBee. Find meaningful volunteer opportunities, 
+              Explore the world with GhumoBee. Find meaningful volunteer opportunities,
               connect with local communities, and create unforgettable memories.
             </motion.p>
             
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
               variants={fadeInUp}
             >
               <Link
                 to="/login"
-                className="inline-flex items-center px-8 py-4 bg-honey hover:bg-yellow-500 text-charcoal font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-8 py-4 bg-honey hover:bg-yellow-500 text-charcoal font-semibold rounded-xl transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Join as Volunteer
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/create-opportunity"
-                className="inline-flex items-center px-8 py-4 border-2 border-teal text-teal hover:bg-teal hover:text-white font-semibold rounded-xl transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-teal text-teal hover:bg-teal hover:text-white font-semibold rounded-xl transition-all transform hover:scale-105"
               >
                 List Your Stay
                 <Heart className="ml-2 h-5 w-5" />
@@ -157,7 +158,7 @@ const Home: React.FC = () => {
       </motion.section>
 
       {/* Featured Opportunities */}
-      <motion.section 
+      <motion.section
         className="py-20 bg-gray-50 dark:bg-gray-800"
         initial="initial"
         whileInView="animate"
@@ -174,6 +175,7 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
+          {/* You have this section commented out, keeping it as is */}
           {/* <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
@@ -198,76 +200,17 @@ const Home: React.FC = () => {
       </motion.section>
 
       {/* How It Works */}
-      <motion.section 
+      <motion.section
         className="py-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={staggerContainer}
       >
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-16" variants={fadeInUp}>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-4">
-              How It Works
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-              Start your volunteer journey in three simple steps
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-12"
-            variants={staggerContainer}
-          >
-            {[
-              {
-                step: "01",
-                icon: Search,
-                title: "Find & Apply",
-                description: "Browse volunteer opportunities that match your skills and interests. Apply directly through our platform."
-              },
-              {
-                step: "02",
-                icon: Users,
-                title: "Connect & Plan",
-                description: "Connect with hosts, discuss expectations, and plan your volunteer experience together."
-              },
-              {
-                step: "03",
-                icon: MapPin,
-                title: "Travel & Volunteer",
-                description: "Embark on your adventure, make meaningful contributions, and create lasting memories."
-              }
-            ].map((item, index) => (
-              <motion.div 
-                key={index}
-                className="text-center"
-                variants={fadeInUp}
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-honey to-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-10 w-10 text-white" />
-                  </div>
-                  <span className="absolute -top-2 -right-2 bg-teal text-white text-sm font-bold px-2 py-1 rounded-full">
-                    {item.step}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-charcoal dark:text-white mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div> */}
         <HowItWorksSection />
       </motion.section>
 
-      {/* Testimonials */}
+      {/* Testimonials - This was also commented out in your original code */}
       {/* <motion.section 
         className="py-20 bg-gradient-to-r from-honey/10 to-teal/10 dark:from-honey/5 dark:to-teal/5"
         initial="initial"
@@ -296,10 +239,11 @@ const Home: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </motion.section> */}
+      </motion.section> 
+      */}
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         className="py-20 bg-charcoal text-white"
         initial="initial"
         whileInView="animate"
@@ -316,14 +260,14 @@ const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/login"
-              className="inline-flex items-center px-8 py-4 bg-honey hover:bg-yellow-500 text-charcoal font-semibold rounded-xl transition-all transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-honey hover:bg-yellow-500 text-charcoal font-semibold rounded-xl transition-all transform hover:scale-105"
             >
               Start Volunteering
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/about"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-charcoal font-semibold rounded-xl transition-all"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-charcoal font-semibold rounded-xl transition-all"
             >
               Learn More
             </Link>

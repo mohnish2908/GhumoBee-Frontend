@@ -50,7 +50,7 @@ function App() {
                 <Route path="/safety-guidelines" element={<SafetyGuideline />} />
                 <Route path="/opportunity/:id" element={<ViewOpportunity />} />
                 
-                {/* <Route path="/plans" element={<PlansPage />} /> */}
+                <Route path="/plans" element={<PlansPage />} />
 
                 <Route element={<ProtectedRoute allowedRoles={['volunteer']} />}>
                   <Route path="/apply/:id" element={<Apply />} />

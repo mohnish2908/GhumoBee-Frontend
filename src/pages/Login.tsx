@@ -20,7 +20,7 @@ const Login: React.FC = () => {
     // --- LOGIN FLOW ---
     const res = await dispatch(login(formData));
     if (res?.data?.success) {
-      navigate("/profile");
+      navigate("/personal-info");
     }
   };
 
