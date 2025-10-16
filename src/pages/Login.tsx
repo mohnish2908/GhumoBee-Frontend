@@ -135,7 +135,7 @@ const Login: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Sign Up
+              Log In
             </motion.button>
           </form>
 
