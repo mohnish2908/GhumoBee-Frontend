@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Calendar, MessageCircle, CheckCircle, ArrowLeft } from "lucide-react";
 import { applyToOpportunity } from "../services/operations/applicationApi";
 import { toast } from "react-hot-toast";
-
+// import { useNavigate } from "react-router-dom";
 const Apply: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -24,9 +24,7 @@ const Apply: React.FC = () => {
   //   image: "https://images.pexels.com/photos/2132249/pexels-photo-2132249.jpeg",
   // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Application submitted:", formData);
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const start = new Date(formData.startDate);
@@ -35,7 +33,6 @@ const Apply: React.FC = () => {
 
     now.setHours(0, 0, 0, 0);
 
-    // Validation
     if (start <= now) {
       toast.error("Start date must be after today's date.");
       return;
@@ -44,8 +41,15 @@ const Apply: React.FC = () => {
       toast.error("End date must be after the start date.");
       return;
     }
-    applyToOpportunity({ ...formData, opportunity: id });
-    setIsSubmitted(true);
+
+    const res = await applyToOpportunity(
+      { ...formData, opportunity: id },
+      navigate
+    );
+
+    if (res?.data?.success) {
+      setIsSubmitted(true);
+    }
   };
 
   const handleChange = (

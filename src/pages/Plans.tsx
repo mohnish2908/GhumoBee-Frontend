@@ -87,10 +87,10 @@ const PlansPage: React.FC = () => {
                         : 'an unknown date';
                     
                     toast.error(
-                        `You already have an active ${subscriptionPlan} membership until ${endDateString}. You cannot purchase another plan while your current membership is active.`,
+                        `You already have an active ${subscriptionPlan}  You cannot purchase another plan while your current membership is active.`,
                         {
                             id: membershipCheckToast,
-                            duration: 6000,
+                            duration: 3000,
                             icon: '⚠️',
                         }
                     );
@@ -105,10 +105,10 @@ const PlansPage: React.FC = () => {
                         : 'an unknown date';
                     
                     toast.success(
-                        `Your previous ${subscriptionPlan} membership expired on ${endDateString}. You can now purchase a new plan!`,
+                        `Your previous ${subscriptionPlan} You can now purchase a new plan!`,
                         {
                             id: membershipCheckToast,
-                            duration: 4000,
+                            duration: 3000,
                             icon: '🔄',
                         }
                     );
@@ -117,28 +117,26 @@ const PlansPage: React.FC = () => {
 
             // Step 4: All validations passed - proceed with plan selection
             setSelectedPlan(planName);
-            
-            toast.success(`${planName} selected! Redirecting to checkout...`, {
-                id: membershipCheckToast,
-                duration: 3000,
-                icon: '🎉',
-            });
-
-            // Navigate to checkout page with plan data
-            setTimeout(() => {
-                navigate('/checkout', { 
-                    state: { 
-                        plan: { 
-                            name: planName, 
-                            price: planPrice,
-                            duration: plans.find(p => p.name === planName)?.duration,
-                            icon: plans.find(p => p.name === planName)?.icon,
-                            features: plans.find(p => p.name === planName)?.features,
-                            perDay: plans.find(p => p.name === planName)?.perDay
-                        }
-                    } 
-                });
-            }, 1500);
+            toast.success("Currently not availabe. Please contact support for assistance.");
+            // toast.success(`${planName} selected! Redirecting to checkout...`, {
+            //     id: membershipCheckToast,
+            //     duration: 3000,
+            //     icon: '🎉',
+            // });
+            // setTimeout(() => {
+            //     navigate('/checkout', { 
+            //         state: { 
+            //             plan: { 
+            //                 name: planName, 
+            //                 price: planPrice,
+            //                 duration: plans.find(p => p.name === planName)?.duration,
+            //                 icon: plans.find(p => p.name === planName)?.icon,
+            //                 features: plans.find(p => p.name === planName)?.features,
+            //                 perDay: plans.find(p => p.name === planName)?.perDay
+            //             }
+            //         } 
+            //     });
+            // }, 1500);
 
         } catch (error) {
             console.error('Error checking membership status:', error);
