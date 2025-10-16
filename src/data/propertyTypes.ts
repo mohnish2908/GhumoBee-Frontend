@@ -1,5 +1,6 @@
 // propertyTypes.ts
 import { 
+  BedDouble ,
   Tent, 
   School, 
   Users, 
@@ -11,7 +12,8 @@ import {
   User, 
   Coffee, 
   Building, 
-  Home 
+  Home ,
+  Bed 
 } from 'lucide-react';
 
 export interface PropertyType {
@@ -23,34 +25,28 @@ export interface PropertyType {
 
 export const propertyTypes: PropertyType[] = [
   {
+    id: "hotel",
+    name: "Hotel",
+    icon: BedDouble,
+    description: "Hotel or resort"
+  },
+  {
+    id: "hostel",
+    name: "Hostel",
+    icon: Building,
+    description: "Affordable shared accommodation"
+  },
+  {
+    id: "cafe",
+    name: "Cafe",
+    icon: Coffee,
+    description: "Coffee shop or restaurant"
+  },
+  {
     id: "camp",
     name: "Camp",
     icon: Tent,
     description: "Outdoor camping experience"
-  },
-  {
-    id: "school",
-    name: "School",
-    icon: School,
-    description: "Educational institution"
-  },
-  {
-    id: "community",
-    name: "Community",
-    icon: Users,
-    description: "Community center or group"
-  },
-  {
-    id: "animal-welfare",
-    name: "Animal Welfare",
-    icon: Heart,
-    description: "Animal care and protection"
-  },
-  {
-    id: "self-help-group",
-    name: "Self Help Group",
-    icon: HelpCircle,
-    description: "Community self-help organization"
   },
   {
     id: "organic-farm",
@@ -71,28 +67,34 @@ export const propertyTypes: PropertyType[] = [
     description: "Wellness and spiritual center"
   },
   {
+    id: "resort-villa-cottage",
+    name: "Resort/Villa/Cottage",
+    icon: Users,
+    description: "Premium stays and group accommodations"
+  },
+  {
     id: "individual",
     name: "Individual",
     icon: User,
     description: "Private individual host"
   },
   {
-    id: "cafe",
-    name: "Cafe",
-    icon: Coffee,
-    description: "Coffee shop or restaurant"
+    id: "dormitory",
+    name: "Dormitory",
+    icon: Bed ,
+    description: "Shared dorm-style accommodation"
   },
   {
-    id: "hotel",
-    name: "Hotel",
-    icon: Building,
-    description: "Hotel or resort"
+    id: "school",
+    name: "School",
+    icon: School,
+    description: "Educational institution"
   },
   {
-    id: "budget-hotel",
-    name: "Budget Hotel",
+    id: "homestay",
+    name: "Homestay",
     icon: Home,
-    description: "Affordable accommodation"
+    description: "Stay with local hosts and families"
   }
 ];
 
